@@ -1,4 +1,5 @@
-# 🌤️ SkyCast - Advanced Intelligent Weather Dashboard
+🌤️ SkyCast - Advanced Intelligent Weather Dashboard  
+🔗 Live Demo: https://skycast-one-wine.vercel.app
 
 ## 📖 Project Overview
 SkyCast is a premium, feature-rich weather application built with **React** that goes beyond basic forecasting. It serves as an intelligent daily planner, providing real-time data, visualization, and lifestyle advice. The application features a dynamic theme engine that adapts to weather conditions, a voice-controlled search interface, and interactive data verifications like sun position tracking and pollution maps.
