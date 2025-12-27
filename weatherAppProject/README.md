@@ -77,13 +77,6 @@ The application features:
 
 ---
 
-## ⚙️ Run the Project Locally
-
-```bash
-git clone https://github.com/Mausamkumarsingh/-SkyCast-.git
-cd -SkyCast-/weatherAppProject
-npm install
-npm run dev
 
 ## 🖼️ Screenshots
 
@@ -97,8 +90,20 @@ npm run dev
 ![24 Hour Forecast](weatherAppProject/src/assets/24hour.png)
 
 
+🛡️ License 
 
-🛡️ License
-
-This project is for educational and personal use.
+This project is for educational and personal use. 
 You may modify and use it for learning purposes.
+
+## ⚙️ Run the Project Locally
+
+```bash
+git clone https://github.com/Mausamkumarsingh/-SkyCast-.git
+cd -SkyCast-/weatherAppProject
+npm install
+npm run dev
+
+
+
+
+
