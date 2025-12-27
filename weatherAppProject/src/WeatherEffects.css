@@ -1,0 +1,128 @@
+/* Fullscreen Overlay Container */
+.weather-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Let clicks pass through */
+    z-index: 50;
+    /* Above background, below UI if possible, or just subtle */
+    overflow: hidden;
+}
+
+/* Rain Effect */
+.rain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.imgur.com/K1qjj9h.png');
+    /* Simple rain texture or gradient line */
+    /* Accessing a public rain texture is risky if link breaks. A pure CSS rain is safer. */
+    /* Let's use pure css gradient lines */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
+    background-size: 1px 50px;
+    /* This needs many elements. Let's use a simpler background scrolling approach */
+}
+
+
+/* Pure CSS Rain */
+.rain-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.drop {
+    position: absolute;
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, rgba(160, 210, 255, 0.4));
+    top: -100px;
+    animation: drop 1s linear infinite;
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(0vh);
+    }
+
+    100% {
+        transform: translateY(110vh);
+    }
+}
+
+/* Snow Effect */
+.snow-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.flake {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    top: -10px;
+    animation: fall 3s linear infinite;
+    filter: blur(1px);
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0vh) translateX(0px);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(110vh) translateX(20px);
+        opacity: 0.3;
+    }
+}
+
+/* Thunder Effect */
+.thunder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    animation: flash 5s infinite;
+}
+
+@keyframes flash {
+
+    0%,
+    90% {
+        opacity: 0;
+    }
+
+    91% {
+        opacity: 0.3;
+    }
+
+    92% {
+        opacity: 0;
+    }
+
+    93% {
+        opacity: 0.3;
+    }
+
+    94% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

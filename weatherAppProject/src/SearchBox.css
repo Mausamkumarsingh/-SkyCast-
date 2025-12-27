@@ -1,0 +1,35 @@
+.SearchBox {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Force white text and borders for dark background compatibility */
+.SearchBox .MuiTextField-root {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.SearchBox .MuiInputBase-input {
+    color: white !important;
+}
+
+.SearchBox .MuiInputLabel-root {
+    color: #aaaaaa !important;
+}
+
+.SearchBox .MuiInputLabel-root.Mui-focused {
+    color: #90caf9 !important;
+    /* Light blue when focused */
+}
+
+.SearchBox .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.SearchBox .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: white !important;
+}
+
+.SearchBox .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #90caf9 !important;
+}

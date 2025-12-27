@@ -1,0 +1,222 @@
+:root {
+  --bg-color: #101014;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: #0f0f13;
+  /* Deep dark base */
+  color: var(--text-color);
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* Prevent scrollbar from moving shapes */
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
+/* Starfield Animation */
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+#stars,
+#stars2,
+#stars3 {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  animation: animStar 50s linear infinite;
+}
+
+#stars {
+  box-shadow: 1744px 122px #FFF, 134px 1321px #FFF, 92px 859px #FFF, 1843px 255px #FFF,
+    1200px 300px #FFF, 500px 1500px #FFF, 800px 100px #FFF, 1500px 800px #FFF,
+    200px 1800px #FFF, 1800px 200px #FFF, 600px 600px #FFF, 1000px 1000px #FFF,
+    300px 1400px #FFF, 1400px 300px #FFF, 900px 1900px #FFF, 1900px 900px #FFF,
+    400px 400px #FFF, 1600px 1600px #FFF, 700px 1100px #FFF, 1100px 700px #FFF,
+    123px 1540px #FFF, 1980px 432px #FFF, 567px 987px #FFF, 1234px 567px #FFF,
+    876px 1234px #FFF, 432px 876px #FFF, 1543px 234px #FFF, 234px 1543px #FFF;
+  animation-duration: 50s;
+}
+
+#stars:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: inherit;
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  box-shadow: 1600px 400px #FFF, 400px 1600px #FFF, 1000px 600px #FFF, 600px 1000px #FFF,
+    1800px 1200px #FFF, 1200px 1800px #FFF, 200px 800px #FFF, 800px 200px #FFF,
+    1400px 1400px #FFF, 300px 300px #FFF, 1900px 1900px #FFF, 100px 100px #FFF,
+    950px 1500px #FFF, 1500px 950px #FFF, 50px 1950px #FFF, 1950px 50px #FFF;
+  animation-duration: 100s;
+}
+
+#stars2:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: inherit;
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  box-shadow: 1200px 800px #FFF, 800px 1200px #FFF, 400px 400px #FFF, 1600px 1600px #FFF,
+    200px 1800px #FFF, 1800px 200px #FFF, 1000px 1000px #FFF, 600px 1400px #FFF;
+  animation-duration: 150s;
+}
+
+#stars3:after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: inherit;
+}
+
+/* Removed old gradientBG animation */
+
+/* Global Theme Variables Default (Dark/Neutral) */
+:root {
+  --bg-gradient: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --accent-color: #4fc3f7;
+  --text-primary: #ffffff;
+}
+
+/* Sunny / Clear Day */
+.theme-clear {
+  --bg-gradient: linear-gradient(135deg, #FF9966 0%, #FF5E62 100%);
+  /* Orange/Red Sunset vibe or Blue Sky */
+  --bg-gradient: linear-gradient(135deg, #56CCF2 0%, #2F80ED 100%);
+  /* Bright Blue */
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --accent-color: #FFD700;
+  /* Gold */
+}
+
+/* Rain / Drizzle */
+.theme-rain {
+  --bg-gradient: linear-gradient(135deg, #203A43 0%, #2C5364 100%);
+  /* Deep Teal/Blue */
+  --glass-bg: rgba(0, 0, 0, 0.3);
+  --accent-color: #00bcd4;
+  /* Cyan */
+}
+
+/* Clouds */
+.theme-clouds {
+  --bg-gradient: linear-gradient(135deg, #bdc3c7 0%, #2c3e50 100%);
+  /* Grey/Blue */
+  --glass-bg: rgba(0, 0, 0, 0.2);
+  --accent-color: #ecf0f1;
+}
+
+/* Snow */
+.theme-snow {
+  --bg-gradient: linear-gradient(135deg, #83a4d4 0%, #b6fbff 100%);
+  /* Icy Blue */
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --accent-color: #ffffff;
+  --text-primary: #1e3c72;
+  /* Darker text for contrast on light bg */
+}
+
+/* Night / Clear Night (Override if needed, handled via logic) */
+.theme-night {
+  --bg-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  --accent-color: #bfaee3;
+  /* Moon purple */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-gradient) !important;
+  /* Force override */
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  transition: background 1s ease-in-out;
+  /* Smooth transition */
+}
+
+#root {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

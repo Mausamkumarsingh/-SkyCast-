@@ -1,0 +1,105 @@
+.main-weather-card {
+    /* Default fallback */
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    border-radius: 25px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* height: 100%;  <-- Removed to prevent stretching */
+    aspect-ratio: 3/4;
+    /* Nice portrait card shape */
+    max-height: 600px;
+    /* Cap the height */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    min-height: 400px;
+    transition: background-image 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Semi-transparent overlay to make text readable */
+/* Semi-transparent overlay to make text readable */
+.main-weather-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.35);
+    /* Dark overlay */
+    z-index: 1;
+}
+
+/* Ensure content is above the overlay */
+.card-header,
+.weather-display,
+.weather-description {
+    position: relative;
+    z-index: 2;
+}
+
+/* Removed old gradient classes as we use inline images now */
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.city-name {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    /* Fixes "punjab" -> "Punjab" */
+    /* white-space: nowrap;  <-- Removing this to fix truncation without changing style */
+    word-wrap: break-word;
+    /* Allow wrapping */
+    line-height: 1.2;
+}
+
+.date-time {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.weather-display {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    flex-grow: 1;
+    /* Take up available space */
+    justify-content: center;
+    /* Center horizontally */
+}
+
+.temperature {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.weather-icon-container {
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    margin-left: 20px;
+    /* Spacing between temp and icon */
+}
+
+.weather-description {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-top: 0;
+    text-align: center;
+    /* Center at bottom */
+    width: 100%;
+}
