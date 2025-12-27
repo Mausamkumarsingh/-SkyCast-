@@ -81,13 +81,14 @@ The application features:
 ## 🖼️ Screenshots
 
 ### 🌍 Dashboard View
-![Dashboard](weatherAppProject/src/assets/dashboard.png)
+![Dashboard](src/assets/dashboard.png)
 
 ### 🗺️ Map & Smart Assistant
-![Smart Assistant](weatherAppProject/src/assets/smart-assistant.png)
+![Smart Assistant](src/assets/smart-assistant.png)
 
 ### ⏱️ 24-Hour Forecast
-![24 Hour Forecast](weatherAppProject/src/assets/24hour.png)
+![24 Hour Forecast](src/assets/24hour.png)
+
 
 
 🛡️ License 
