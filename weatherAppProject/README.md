@@ -97,6 +97,7 @@ npm run dev
 ![24 Hour Forecast](weatherAppProject/src/assets/24hour.png)
 
 
+
 🛡️ License
 
 This project is for educational and personal use.
